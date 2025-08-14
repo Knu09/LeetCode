@@ -1,11 +1,8 @@
 public class Solution_02 {
   public boolean isPalindromeNum(int x) {
-    if (x == 0) {
-      return true;
-    }
-    if (x < 0 || x % 10 == 0) {
-      return false;
-    }
+
+    if (x < 0)
+      return false; // return false since negative are not palindrome
 
     int original = x;
     int reversed_int = 0;
