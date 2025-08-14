@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 class Solution {
   int n;
@@ -22,7 +22,7 @@ class Solution {
       if (isPalindrome(s, idx, i)) {
         temp.add(s.substring(idx, i + 1));
         solve(ans, temp, s, i + 1);
-        temp.remove(temp.size() - 1)
+        temp.remove(temp.size() - 1);
       }
     }
   }
@@ -33,5 +33,10 @@ class Solution {
         return false;
     }
     return true;
+  }
+
+  public static void main(String[] args) {
+    Solution sol = new Solution();
+    System.out.println(sol.partition("aabb"));
   }
 }
