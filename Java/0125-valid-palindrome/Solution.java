@@ -19,13 +19,9 @@ public class Solution {
     while (first <= last) {
 
       // checks if the first and last character is not identical
-      if (fixedStr.charAt(first) != fixedStr.charAt(last)) {
+      if (fixedStr.charAt(first++) != fixedStr.charAt(last++)) {
         return false;
       }
-
-      // increment first and last windows
-      first++;
-      last--;
     }
     return true;
   }
